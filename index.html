@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="main">
+        <div class="firstDiv">
+               <div>
+                <input type="text" id="cityName" placeholder="Enter City">
+                <button id="searchBtn">Search</button>
+               </div>
+               <p>or</p>
+               <button>Current Location</button>
+        </div>
+        <div class="secondDiv" id="secondDiv">
+            <div id="weatherInfo">
+              <p id="temp">23°C</p>
+              <p id="city">bangalore</p>
+              <div class="otherInfo">
+                <div class="wind"> 
+                    <p >Wind</p>
+                    <p>15km/h</p>
+                </div>
+                <div class="wind">
+                    <p>Pressure</p>
+                    <p>15km/h</p>
+                </div>
+                <div class="wind">
+                    <p>Humidity</p>
+                    <p>50%</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
     
 </body>
 </html>
