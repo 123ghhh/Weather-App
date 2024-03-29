@@ -41,13 +41,19 @@ flex-direction: column;
 padding: 10px 20px 10px;
 font-size: 1.2em;
 border: none;
+border-radius: 10px;
 }
-.firstDiv >button{
+#searchBtn{
+    cursor: pointer;
+}
+.firstDiv > button {
     width:90%;
+    cursor: pointer;
 }
-.firstDiv >p{
+.firstDiv > p {
     text-align: center;
     font-size: 1.7em;
+   
 }
 #temp{
     font-size: 4em;
