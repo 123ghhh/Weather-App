@@ -3,3 +3,62 @@
 padding: 0;
 box-sizing: border-box;
 }
+body{
+    width: 100vw;
+height:100vh ;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.main{
+width: 50%;
+height:60% ;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.firstDiv,.secondDiv{
+    margin-top: 20%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    gap: 10px;
+    text-align: center;
+}
+#weatherInfo{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    gap: 10px;
+}
+#cityName,#searchBtn, .firstDiv >button{
+padding: 10px 20px 10px;
+font-size: 1.2em;
+border: none;
+}
+.firstDiv >button{
+    width:90%;
+}
+.firstDiv >p{
+    text-align: center;
+    font-size: 1.7em;
+}
+#temp{
+    font-size: 4em;
+
+}
+.otherInfo{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.wind > p{
+font-size: 1.5em;
+}
