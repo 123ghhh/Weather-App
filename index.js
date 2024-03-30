@@ -46,4 +46,11 @@ div=`<div id="weatherInfo">
 `
     document.getElementById('secondDiv').innerHTML=div
 }
- 
+ document.getElementById("currLoc").addEventListener("click",()=>{
+       navigator.geolocation.getCurrentPosition((position)=>{
+        let lati=position.coords.latitude;
+        let longi=position.coords.longitude;
+        console.log(lati,longi)
+
+       })
+ });
