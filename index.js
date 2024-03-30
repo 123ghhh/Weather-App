@@ -51,7 +51,7 @@ div=`<div id="weatherInfo">
 <p id="temp">${main.temp}°C</p>
 <p id="city">${name}</p>
 <div class="otherInfo">
-  <div class="wind"> 
+  <div class="wind">    
       <p >Wind</p>
       <p>${wind.speed}km/h</p>
   </div>
