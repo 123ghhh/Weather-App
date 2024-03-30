@@ -18,6 +18,22 @@ catch(error){console.error();
 }
 
 
+async function fetchDataByCoordinates(lati, longi){
+    
+    try{ 
+         console.log(lati, longi)
+    let res= await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&appid={API key}&units=metric`)
+    let result=await res.json();
+    console.log(result)
+    displayWeather(result)
+}
+catch(error){console.error();
+
+}
+  
+}
+
+
 
 btn.addEventListener('click' ,() =>{
    fetchData(cityName.value);
@@ -50,6 +66,7 @@ div=`<div id="weatherInfo">
        navigator.geolocation.getCurrentPosition((position)=>{
         let lati=position.coords.latitude;
         let longi=position.coords.longitude;
+        fetchDataByCoordinates(lati, longi)
         console.log(lati,longi)
 
        })
