@@ -8,6 +8,9 @@ async function fetchData(city){
     try{  console.log("cityName", city)
     let res= await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}&units=metric`)
     let result=await res.json();
+    if(result.message){
+        document.getElementById("secondDiv").innerHTML=`<h1>${result.message}</h1>`
+    }
     console.log(result)
     displayWeather(result)
 }
@@ -22,10 +25,13 @@ async function fetchDataByCoordinates(lati, longi){
     
     try{ 
          console.log(lati, longi)
-    let res= await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&appid={API key}&units=metric`)
+    let res= await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&appid=${API_key}&units=metric`)
     let result=await res.json();
-    console.log(result)
-    displayWeather(result)
+    
+    if(result.message){
+        document.getElementById("secondDiv").innerHTML=`<h1>${result.message}</h1>`
+    }
+    displayWeather(result);
 }
 catch(error){console.error();
 
