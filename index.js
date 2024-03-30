@@ -1,7 +1,7 @@
 
 const btn=document.getElementById('searchBtn');
 const cityName=document.getElementById('cityName');
-const API_key= 'bb5299cb84c6e001edae186e78365be9';
+const API_key= '65bb6e2dce90c4bd5b82dce8a8857957';
 
 async function fetchData(city){
     try{  console.log("cityName", city)
@@ -19,7 +19,7 @@ catch(error){console.error();
 
 
 btn.addEventListener('click' ,() =>{
-    alert(cityName.value);
+   fetchData(cityName.value);
 })
 
 
