@@ -11,7 +11,7 @@ async function fetchData(city){
     if(result.message){
         document.getElementById("secondDiv").innerHTML=`<h1>${result.message}</h1>`
     }
-    console.log(result)
+    console.log(result);
     displayWeather(result)
 }
 catch(error){console.error();
@@ -24,7 +24,7 @@ catch(error){console.error();
 async function fetchDataByCoordinates(lati, longi){
     
     try{ 
-         console.log(lati, longi)
+         console.log(lati, longi);
     let res= await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&appid=${API_key}&units=metric`)
     let result=await res.json();
     
@@ -72,8 +72,8 @@ div=`<div id="weatherInfo">
        navigator.geolocation.getCurrentPosition((position)=>{
         let lati=position.coords.latitude;
         let longi=position.coords.longitude;
-        fetchDataByCoordinates(lati, longi)
-        console.log(lati,longi)
+        fetchDataByCoordinates(lati, longi);
+        console.log(lati,longi);
 
        });
  });
