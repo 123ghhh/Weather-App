@@ -57,7 +57,7 @@ div=`<div id="weatherInfo">
   </div>
   <div class="wind">
       <p>Pressure</p>
-      <p>${main.pressure}km/h</p>
+      <p>${main.pressure}pa</p>
   </div>
   <div class="wind">
       <p>Humidity</p>
