@@ -46,7 +46,7 @@ btn.addEventListener('click' ,() =>{
 })
 
 
-function displayWeather({name,main, wind}){
+function displayWeather({name,main,wind}){
 div=`<div id="weatherInfo">
 <p id="temp">${main.temp}°C</p>
 <p id="city">${name}</p>
@@ -75,5 +75,5 @@ div=`<div id="weatherInfo">
         fetchDataByCoordinates(lati, longi)
         console.log(lati,longi)
 
-       })
+       });
  });
